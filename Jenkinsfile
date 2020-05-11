@@ -6,12 +6,6 @@ pipeline {
 
   }
   stages {
-    stage('Checkout') {
-      steps {
-        git(url: 'https://github.com/BryanDollery/kh-cucumber-labs.git', branch: '*/master')
-      }
-    }
-
     stage('Build') {
       steps {
         sh 'mvn clean compile'
